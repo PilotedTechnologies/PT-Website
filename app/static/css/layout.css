@@ -1,0 +1,24 @@
+body {
+  height: 100%;
+	background: red;
+	font-family: 'Julius Sans One', serif;
+}
+
+#pilotech-main {
+	width: 100%;
+	height: 400px;
+}	
+
+.navbar {
+	background:transparent;
+}
+
+#logo {
+	width: 13rem;
+	height: 5rem;
+}
+
+#brand_name {
+	font-family: 'Julius Sans One', serif;
+	font-size: 150%;
+}

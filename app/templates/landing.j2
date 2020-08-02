@@ -1,0 +1,11 @@
+{% extends "layout.j2" %}
+{% block title %}Landing{% endblock %}
+
+{% block head %}
+{{ super() }}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/landing.css') }}">
+{% endblock %}
+
+{% block content %}
+<p> Landing</p>
+{% endblock %}

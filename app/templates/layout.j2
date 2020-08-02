@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<title>Pilotech - {% block sub_title %}{% endblock %}</title>
+		<meta name="description" content="Pilotech is a student-led startup leading in custom ML and deep learning technologies. From convex business optimization, ML-driven research and social justice, Pilotech instantly delivers integrated solutions for your specified needs.">
+		<!-- CSS only -->
+		{% block css_head %}
+		<link rel="stylesheet" href="{{url_for('static', filename='css/layout.css')}}">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Julius+Sans+One">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+		{% endblock %}		
+	</head>
+
+	<body>
+		<div id="wrap">
+			<nav class="navbar navbar-light navbar-expand-lg">
+				<a class="navbar-brand" href="{{url_for('landing.landing_page')}}" id="logo">
+					<img src="{{url_for('static', filename='img/logo.png')}}" class="d-inline-block align-top" alt="logo" id="logo">
+				</a>
+				<ul class="nav navbar-nav mx-auto">
+					<li class="nav-item" id="brand_name"><a class="nav-link" href="#">Pil&#9881tech</a></li>
+	        	</ul>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+				</button>
+				
+				<div class="collapse navbar-collapse" id="navbarToggler">
+					<ul class="navbar-nav mr-auto mt-4 mt-lg-0">
+						<li class="nav-item">
+							<a class="nav-link" href="{{url_for('services.services_landing_page')}}">Services</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="{{url_for('demo.demo_landing_page')}}">Demo</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="{{url_for('pricing.pricing_landing_page')}}">Pricing</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="{{url_for('api.api_landing_page')}}">API</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="{{url_for('about_us.about_us_landing_page')}}">About Us</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">Login</a>
+						</li>
+						<div class="g-signin2" data-onsuccess="onSignIn" style=“display: inline-block”></div>
+					</ul>
+				</div>
+			</nav>
+		</div>
+		<div class="container">
+		{% block content %}
+		{% endblock %}
+
+		{% block scripts %}
+		<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+		{% endblock %}
+	</body>
+</html>
