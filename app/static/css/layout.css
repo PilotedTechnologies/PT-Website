@@ -9,16 +9,7 @@ body {
 	height: 400px;
 }	
 
-.navbar {
-	background:transparent;
-}
-
 #logo {
 	width: 13rem;
 	height: 5rem;
-}
-
-#brand_name {
-	font-family: 'Julius Sans One', serif;
-	font-size: 150%;
 }

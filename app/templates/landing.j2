@@ -1,11 +1,68 @@
 {% extends "layout.j2" %}
 {% block title %}Landing{% endblock %}
-
 {% block head %}
-{{ super() }}
-<link rel="stylesheet" href="{{ url_for('static', filename='css/landing.css') }}">
+	{{ super() }}s
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/landing.css') }}">
 {% endblock %}
-
 {% block content %}
-<p> Landing</p>
+	<img src="{{ url_for('static', filename='img/dronemain.jpg') }}" id="img1" alt="landing header background" style="width:100%; height:auto">
+	<section id="hero" class="d-flex align-items-center">
+		<div class="container-fluid" data-aos="fade-up">
+			<div class="row justify-content-center">
+				<div class="col-xl-5 col-lg-6 pt-3 pt-lg-0 order-2 order-lg-1 d-flex flex-column justify-content-center">
+					<h1>@Pil&#9881tech, We're on it.</h1>
+					<h2>College students do your coding.</h2>
+					<div><a href="#about" class="btn-get-started scrollto">Get Started</a></div>
+				</div>
+				<div class="col-xl-4 col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="80">
+					<img src="{{ url_for('static', filename='img/logo.png') }}" class="img-fluid animated" alt="">
+				</div>
+			</div>
+		</div>
+	</section>
+	<main id="main">
+		<section id="about" class="about">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-6 order-1 order-lg-2" data-aos="zoom-in" data-aos-delay="150">
+						<img src="{{ url_for('static', filename='img/dishmain.jpg') }}" class="img-fluid" alt="">
+					</div>
+					<div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content" data-aos="fade-right">
+						<h3>We got these:</h3>
+						<p class="font-italic">
+							Because we are Pilotech.
+						</p>
+						<ul>
+							<li><i class="icofont-check-circled"></i> ML algorithms for trends and data analysis</li>
+							<li><i class="icofont-check-circled"></i> Deep Learning algorithms for convex optimization #bigdata</li>
+							<li><i class="icofont-check-circled"></i> Updated by top-notch research in the AI/ML field</li>
+						</ul>
+						<a href="#" class="read-more">Read More <i class="icofont-long-arrow-right"></i></a>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="counts" class="counts">
+			<div class="container">
+				<div class="row counters">
+					<div class="col-lg-3 col-6 text-center">
+						<span data-toggle="counter-up">232</span>
+						<p>Clients</p>
+					</div>
+					<div class="col-lg-3 col-6 text-center">
+						<span data-toggle="counter-up">521</span>
+						<p>Projects</p>
+					</div>
+					<div class="col-lg-3 col-6 text-center">
+						<span data-toggle="counter-up">1,463</span>
+						<p>Hours Of Support</p>
+					</div>
+					<div class="col-lg-3 col-6 text-center">
+						<span data-toggle="counter-up">15</span>
+						<p>Hard Workers</p>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
 {% endblock %}

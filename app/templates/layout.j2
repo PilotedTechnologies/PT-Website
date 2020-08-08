@@ -1,65 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
-
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<title>Pilotech - {% block sub_title %}{% endblock %}</title>
 		<meta name="description" content="Pilotech is a student-led startup leading in custom ML and deep learning technologies. From convex business optimization, ML-driven research and social justice, Pilotech instantly delivers integrated solutions for your specified needs.">
-		<!-- CSS only -->
+		<!-- Favicons -->
+		<link href="assets/img/favicon.png" rel="icon">
+		<link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+		<!-- Google Fonts -->
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 		{% block css_head %}
-		<link rel="stylesheet" href="{{url_for('static', filename='css/layout.css')}}">
-		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Julius+Sans+One">
-		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-		{% endblock %}		
+			<!-- Vendor CSS Files -->
+			<link href="{{url_for('static', filename='vendor/icofont/icofont.min.css')}}" rel="stylesheet">
+			<link href="{{url_for('static', filename='vendor/boxicons/css/boxicons.min.css')}}" rel="stylesheet">
+			<link href="{{url_for('static', filename='vendor/owl.carousel/assets/owl.carousel.min.css')}}" rel="stylesheet">
+			<link href="{{url_for('static', filename='vendor/venobox/venobox.css')}}" rel="stylesheet">
+			<link href="{{url_for('static', filename='vendor/aos/aos.css')}}" rel="stylesheet">
+			<!-- Template Main CSS File -->
+			<link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+			<link rel="stylesheet" href="{{url_for('static', filename='css/layout.css')}}">
+			<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Julius+Sans+One">
+			<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+		{% endblock %}
 	</head>
-
 	<body>
-		<div id="wrap">
-			<nav class="navbar navbar-light navbar-expand-lg">
-				<a class="navbar-brand" href="{{url_for('landing.landing_page')}}" id="logo">
-					<img src="{{url_for('static', filename='img/logo.png')}}" class="d-inline-block align-top" alt="logo" id="logo">
-				</a>
-				<ul class="nav navbar-nav mx-auto">
-					<li class="nav-item" id="brand_name"><a class="nav-link" href="#">Pil&#9881tech</a></li>
-	        	</ul>
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-				</button>
-				
-				<div class="collapse navbar-collapse" id="navbarToggler">
-					<ul class="navbar-nav mr-auto mt-4 mt-lg-0">
-						<li class="nav-item">
-							<a class="nav-link" href="{{url_for('services.services_landing_page')}}">Services</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="{{url_for('demo.demo_landing_page')}}">Demo</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="{{url_for('pricing.pricing_landing_page')}}">Pricing</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="{{url_for('api.api_landing_page')}}">API</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="{{url_for('about_us.about_us_landing_page')}}">About Us</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="#">Login</a>
-						</li>
-						<div class="g-signin2" data-onsuccess="onSignIn" style=“display: inline-block”></div>
-					</ul>
+		<!-- ======= Header ======= -->
+		<header id="header" class="fixed-top ">
+			<div class="container-fluid">
+				<div class="row justify-content-center">
+					<div class="col-xl-9 d-flex align-items-center">
+						<h1 class="logo mr-auto"><a href="index.html" style="font-family: Julius Sans One">Pil&#9881tech</a></h1>
+						<!-- Uncomment below if you prefer to use an image logo -->
+						<!-- <a href="index.html" class="logo mr-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+						<nav class="nav-menu d-none d-lg-block">
+							<ul>
+								<li class="active">
+									<a href="index.html">Home</a>
+								</li>
+								<li>
+									<a class="nav-link" href="{{url_for('services.services_landing_page')}}">Services</a>
+								</li>
+								<li>
+									<a class="nav-link" href="{{url_for('demo.demo_landing_page')}}">Demo</a>
+								</li>
+								<li>
+									<a class="nav-link" href="{{url_for('pricing.pricing_landing_page')}}">Pricing</a>
+								</li>
+								<li>
+									<a class="nav-link" href="{{url_for('api.api_landing_page')}}">API</a>
+								</li>
+								<li>
+									<a class="nav-link" href="{{url_for('about_us.about_us_landing_page')}}">About Us</a>
+								</li>
+								<li>
+									<a class="nav-link" href="#">Login</a>
+								</li>
+							</ul>
+							</nav><!-- .nav-menu -->
+							<a href="#about" class="get-started-btn scrollto">Get Started</a>
+						</div>
+					</div>
 				</div>
-			</nav>
-		</div>
-		<div class="container">
-		{% block content %}
-		{% endblock %}
+			</header>
+				{% block content %}
+				{% endblock %}
+				{% block footer %}
+				{% endblock %}
+				{% block scripts %}
 
-		{% block scripts %}
-		<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-		{% endblock %}
-	</body>
-</html>
+					<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+					<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+					<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+					<!-- Vendor JS Files -->
+					<script src="{{url_for('static', filename='vendor/jquery.easing/jquery.easing.min.js')}}"></script>
+					<script src="{{url_for('static', filename='vendor/php-email-form/validate.js')}}"></script>
+					<script src="{{url_for('static', filename='vendor/waypoints/jquery.waypoints.min.js')}}"></script>
+					<script src="{{url_for('static', filename='vendor/counterup/counterup.min.js')}}"></script>
+					<script src="{{url_for('static', filename='vendor/owl.carousel/owl.carousel.min.js')}}"></script>
+					<script src="{{url_for('static', filename='vendor/isotope-layout/isotope.pkgd.min.js')}}"></script>
+					<script src="{{url_for('static', filename='vendor/venobox/venobox.min.js')}}"></script>
+					<script src="{{url_for('static', filename='vendor/aos/aos.js')}}"></script>
+
+					<!-- Template Main JS File -->
+					<script src="{{url_for('static', filename='js/main.js')}}"></script>
+				{% endblock %}
+			</body>
+		</html>
