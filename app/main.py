@@ -10,7 +10,8 @@ app.register_blueprint(demo_blueprint, url_prefix='/demo')
 app.register_blueprint(pricing_blueprint, url_prefix='/pricing')
 app.register_blueprint(api_blueprint, url_prefix='/api')
 app.register_blueprint(about_us_blueprint, url_prefix='/about-us')
-app.register_blueprint(landing_blueprint, url_prefix='/login')
+app.register_blueprint(login_blueprint, url_prefix='/login')
+
 
 @app.route('/')
 def home():

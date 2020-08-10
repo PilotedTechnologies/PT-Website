@@ -2,6 +2,8 @@ from flask import Blueprint, request, session, Response, render_template, make_r
 login_blueprint = Blueprint('login', __name__)
 
 # landing page for api
-@login_blueprint.route('/', methods=['GET',])
+
+
+@login_blueprint.route('/', methods=['GET', ])
 def login_landing_page():
-    pass
+    return render_template('login.j2')

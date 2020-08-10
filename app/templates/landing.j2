@@ -1,7 +1,7 @@
 {% extends "layout.j2" %}
 {% block title %}Landing{% endblock %}
 {% block head %}
-	{{ super() }}s
+	{{ super() }}
 	<link rel="stylesheet" href="{{ url_for('static', filename='css/landing.css') }}">
 {% endblock %}
 {% block content %}
@@ -116,50 +116,53 @@
 					<textarea rows="3" id="textarea" name="textarea" value="Text area" class="mx-12 col">Input </textarea> <br><br>
 				</div>
 			</div>
-		</div>
-		<div class="container" style="background-color: white">
-			<div class="row">
-				<div class="col col-lg-4">
-					<input type="range" class="form-control-range mt-2">
-					<input type="range" class="form-control-range mt-2">
-					<input type="range" class="form-control-range mt-2">
-					<div class="form-check mt-2">
-						<label class="form-check-label ">
-							<input type="checkbox" class="form-check-input" value="">Option 1
-						</label>
-					</div>
-					<div class="form-check mt-2">
-						<label class="form-check-label">
-							<input type="checkbox" class="form-check-input" value="">Option 2
-						</label>
-					</div>
-					<div class="form-check mt-2">
-						<label class="form-check-label">
-							<input type="checkbox" class="form-check-input" value="">Option 3
-						</label>
-					</div>
-					<div class="form-check mt-2">
-						<label class="form-check-label">
-							<input type="radio" class="form-check-input" name="optradio">Option 1
-						</label>
-					</div>
-					<div class="form-check mt-2 mb-2">
-						<label class="form-check-label">
-							<input type="radio" class="form-check-input" name="optradio">Option 2
-						</label>
+			<div class="mx-5">
+				<div class="container border-radius">
+					<div class="row">
+						<textarea rows="2" id="textarea2" class="col-lg-8" name="textarea2"> Output </textarea>
+						<span class="col col-lg-3"></span>
+						<a href="#" class="btn btn-success col-lg-1 text-center pl-3"> <p><span class="glyphicon glyphicon-envelope"></span></p></a>
+						<div class="container pt-3" style="width:100%">
+							<div class="progress">
+								<div class="progress-bar" style="width:70%"></div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-		<div class="mx-5">
-			<div class="container border-radius">
-				<div class="row">
-					<textarea rows="2" id="textarea2" class="col-lg-8" name="textarea2"> Output </textarea>
-					<span class="col col-lg-3"></span>
-					<a href="#" class="btn btn-success col-lg-1 text-center pl-3"> <p><span class="glyphicon glyphicon-envelope"></span></p></a>
-					<div class="container pt-3" style="width:100%">
-						<div class="progress">
-							<div class="progress-bar" style="width:70%"></div>
+		<div class="container" style="background-color: white">
+			<div class="row">
+				<div class="col col-lg-4">
+					<div class="container">
+						<input type="range" class="form-control-range mt-2">
+						<input type="range" class="form-control-range mt-2">
+						<input type="range" class="form-control-range mt-2">
+					</div>
+					<div class="container">
+						<div class="form-check-inline">
+						  <label class="form-check-label">
+						    <input type="checkbox" class="form-check-input" value="">Option 1
+						  </label>
+						</div>
+					</div>
+					<div class="container">
+						<div class="form-check-inline">
+						  <label class="form-check-label">
+						    <input type="radio" class="form-check-input" name="optradio">Option 1
+						  </label>
+						</div>
+					</div>
+					<div class="container">
+						<div class="dropdown">
+						  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						    Dropdown button
+						  </button>
+						  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+						    <a class="dropdown-item" href="#">Action</a>
+						    <a class="dropdown-item" href="#">Another action</a>
+						    <a class="dropdown-item" href="#">Something else here</a>
+						  </div>
 						</div>
 					</div>
 				</div>
